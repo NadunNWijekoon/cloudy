@@ -118,6 +118,8 @@ const LOCATIONS_MOCK: Record<string, WeatherData> = {
   }
 };
 
+export const AVAILABLE_LOCATIONS = Object.keys(LOCATIONS_MOCK);
+
 export function fetchWeather(location: string = 'San Francisco'): WeatherData {
   return LOCATIONS_MOCK[location] || LOCATIONS_MOCK['San Francisco'];
 }
