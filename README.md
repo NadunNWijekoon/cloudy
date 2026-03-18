@@ -1,56 +1,54 @@
-# Cloudy | Intelligent Weather Assistant
+# ☁️ Cloudy | Intelligent AI Weather Assistant
 
-Cloudy is a modern, AI-powered weather application designed to provide actionable insights, lifestyle recommendations, and creative advice based on current and future weather conditions.
+Cloudy is a next-generation weather application that transforms raw data into actionable lifestyle intelligence. Built with **Next.js 15**, **Tailwind CSS**, and **Firebase Genkit**, it uses advanced AI to help you plan your day, protect your home, and enjoy the outdoors.
 
-## 🌟 Features
+## ✨ Key AI-Powered Features
 
-- **Hyper-Local Forecasts**: Real-time conditions and 7-day outlooks for global cities.
-- **AI Insights**: A smart assistant that explains exactly what the weather means for your day.
-- **Lifestyle Advisors**:
-  - **Clothing Advisor**: Suggests optimal layers and accessories.
-  - **Garden Guru**: Tips for watering and protecting your plants.
-  - **Lens & Light**: Expert photography advice for outdoor shooters.
-  - **Comfort Food**: Weather-matched recipe suggestions.
-- **Planning Tools**:
-  - **Outdoor Vibe Score**: A playful rating of current conditions.
-  - **Routine Optimizer**: Finds the best window for runs, coffee, or dog walks.
-  - **Travel Assistant**: Helps plan activities and trips based on forecast trends.
-- **Voice Assistant**: Natural language weather queries via a floating interface.
-- **Safety First**: Immediate, AI-generated safety plans for severe weather alerts.
+- **🧠 Smart Insights**: A daily briefing that interprets the forecast into human-friendly advice (e.g., "The UV index is high, don't forget your sunscreen").
+- **🧥 Clothing Advisor**: Personalized outfit suggestions based on temperature, wind, humidity, and specific weather conditions.
+- **🌱 Garden Care**: Expert horticultural tips on watering needs and plant protection based on upcoming trends.
+- **📸 Lens & Light**: Photography advice for capturing the best shots given current lighting and weather conditions.
+- **🍳 Mood Food**: Comfort food recipe suggestions that match the vibe of the weather.
+- **🏃 Routine Optimizer**: Find the best windows for outdoor activities like running or walking the dog.
+- **✈️ Travel Assistant**: Plan adventures with AI-driven weather analysis for any destination.
+- **🛡️ Safety Guide**: Immediate, actionable safety plans generated when severe weather alerts are active.
+- **🎙️ Voice Assistant**: Natural language weather queries through a simple floating interface.
 
 ## 🛠 Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
-- **AI Engine**: [Genkit](https://github.com/firebase/genkit)
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+- **AI Integration**: [Genkit](https://github.com/firebase/genkit) (v1.x)
 - **Model Provider**: OpenAI (via `genkitx-openai`)
-- **Styling**: Tailwind CSS
-- **UI Components**: Shadcn UI
-- **Icons**: Lucide React
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Components**: [Shadcn UI](https://ui.shadcn.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
 ## 🚀 Getting Started
 
-### 1. Environment Setup
+### 1. Environment Configuration
 Create a `.env` file in the root directory and add your OpenAI API key:
 ```env
 OPENAI_API_KEY=your_openai_api_key_here
 ```
 
-### 2. Development
+### 2. Install Dependencies
+The project uses `npm`. Simply run:
 ```bash
 npm install
-npm run dev
 ```
 
-The app will be available at `http://localhost:9002`.
+### 3. Run Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:9002](http://localhost:9002) in your browser.
 
-## 🏗 Architecture
+## 📁 Project Structure
 
-The application leverages **Genkit Flows** to encapsulate AI logic. Each AI feature (Gardening, Photography, Recipes, etc.) is implemented as a separate flow in `src/ai/flows/`.
-
-- `src/ai/genkit.ts`: Central Genkit configuration.
-- `src/ai/flows/`: Individual AI agents and logic.
-- `src/components/weather/`: React components providing the user interface for AI features.
-- `src/app/lib/weather-service.ts`: Data provider for current and forecasted weather.
+- `src/ai/`: Central Genkit configuration (`genkit.ts`) and individual AI flows for various features.
+- `src/components/weather/`: Modular React components for each weather widget and AI assistant.
+- `src/app/lib/`: Weather service mock and data management utilities.
+- `src/hooks/`: Custom React hooks for mobile detection and UI state.
 
 ## 📄 License
 MIT
