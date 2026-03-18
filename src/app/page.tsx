@@ -1,7 +1,8 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
-import { AlertCircle, Bell } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
 import { LocationManager } from '@/components/weather/LocationManager';
 import { AIInsightCard } from '@/components/weather/AIInsightCard';
 import { HourlyForecast } from '@/components/weather/HourlyForecast';
@@ -9,6 +10,13 @@ import { DailyForecast } from '@/components/weather/DailyForecast';
 import { WeatherGrid } from '@/components/weather/WeatherGrid';
 import { TravelAssistant } from '@/components/weather/TravelAssistant';
 import { VoiceAssistant } from '@/components/weather/VoiceAssistant';
+import { ClothingAdvisor } from '@/components/weather/ClothingAdvisor';
+import { SafetyAdvisor } from '@/components/weather/SafetyAdvisor';
+import { OutdoorScore } from '@/components/weather/OutdoorScore';
+import { RoutineOptimizer } from '@/components/weather/RoutineOptimizer';
+import { PhotographyAdvisor } from '@/components/weather/PhotographyAdvisor';
+import { GardenCareAdvisor } from '@/components/weather/GardenCareAdvisor';
+import { RecipeAdvisor } from '@/components/weather/RecipeAdvisor';
 import { WeatherIcon } from '@/components/weather/WeatherIcon';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { fetchWeather, WeatherData } from '@/app/lib/weather-service';
@@ -54,6 +62,9 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Outdoor Vibe Score Widget */}
+      <OutdoorScore weather={weather} />
+
       {/* Severe Alerts */}
       {weather.alerts && weather.alerts.length > 0 && (
         <Alert variant="destructive" className="mb-6 rounded-3xl border-none bg-red-50 dark:bg-red-950/30 text-red-600 dark:text-red-400">
@@ -67,8 +78,26 @@ export default function Home() {
         </Alert>
       )}
 
+      {/* AI Safety Advisor (Only shows when alerts exist) */}
+      <SafetyAdvisor weather={weather} />
+
       {/* AI Insight Card */}
       <AIInsightCard weather={weather} />
+
+      {/* Photography & Lighting Advisor */}
+      <PhotographyAdvisor weather={weather} />
+
+      {/* Weather-based Recipe Advisor */}
+      <RecipeAdvisor weather={weather} />
+
+      {/* Garden Care Advisor */}
+      <GardenCareAdvisor weather={weather} />
+
+      {/* Clothing Advisor */}
+      <ClothingAdvisor weather={weather} />
+
+      {/* Routine Optimizer */}
+      <RoutineOptimizer weather={weather} />
 
       {/* Hourly Forecast */}
       <HourlyForecast weather={weather} />
