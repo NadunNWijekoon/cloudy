@@ -1,6 +1,9 @@
 'use server';
 /**
  * @fileOverview A Genkit flow for the AI Travel & Planning Assistant.
+ *
+ * This flow provides personalized travel and activity recommendations based on 
+ * current and future weather conditions.
  */
 
 import {ai} from '@/ai/genkit';
