@@ -1,3 +1,16 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "weather-radar",
+      "description": "Abstract weather radar map overlay",
+      "imageUrl": "https://picsum.photos/seed/cloudy-radar/800/600",
+      "imageHint": "weather radar"
+    },
+    {
+      "id": "sunny-bg",
+      "description": "Calm sunny sky with soft clouds",
+      "imageUrl": "https://picsum.photos/seed/sunny-day/1200/800",
+      "imageHint": "sunny sky"
+    }
+  ]
 }
